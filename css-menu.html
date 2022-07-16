@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>级联菜单</title>
+
+  <style>
+    /* 设置整体背景颜色 */
+    body {
+      background-color: #34495E;
+      font-size: 0;
+    }
+    /* 去掉列表样式 */
+    li {
+      list-style: none;
+    }
+    .all {
+      /* border: 2px solid; */
+    }
+    .menu ul li {
+      /* 设置最上方菜单栏样式 */
+      display: inline-block;
+      background-color:rgb(255, 255, 255);
+      border: 2px solid;
+      width: 70px;
+      height: 30px;
+      text-align: center;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 16px;
+      line-height: 2;
+    }
+    .click {
+      position: relative;
+    }
+
+    .click ul {
+      position: absolute;
+      left: -2px;
+      padding: 0;
+      margin: 0;
+      display: none;
+    }
+    .click ul li {
+      display:inline-block;
+      width: 150px;
+      text-align: left;
+    }
+    .second ul {
+      position: absolute;
+      display: none;
+    }
+    /* 光标hover到顶部菜单栏时变灰色 */
+    .menu ul li:hover {
+      background-color:rgb(132, 120, 120);
+    }
+    /* 点击查看出现第一层菜单 */
+    .menu li:hover .left {
+      display: block;
+    }
+    /* 光标hover的地方变色 */
+    .menu li ul li:hover {
+      background-color: #e67e22;
+    }
+    /* 点击编辑器布局出现第二层菜单
+      由于第二层菜单纵向显示，所以调整了左侧和顶部距离 */
+    .bianjiqi:hover .right ul {
+      display: block;
+      left: 100%;
+      top: 102px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="all">
+    <div class="menu">
+      <ul>
+        <li>文件</li>
+        <li>编辑</li>
+        <li>选择</li>
+        <li>查看
+          <div class="click">
+            <ul class="left">
+              <li>命令面板</li>
+              <li>打开视图</li>
+              <li>外观</li>
+              <li class="bianjiqi">编辑器布局
+                <div class="right">
+                  <ul>
+                    <li>向上拆分</li>
+                    <li>向下拆分</li>
+                    <li>向左拆分</li>
+                    <li>向右拆分</li>
+                  </ul>
+                </div>
+              </li>
+              <li>资源管理器</li>
+              <li>搜索</li>
+              <li>源代码管理</li>
+              <li>运行</li>
+              <li>扩展</li>
+              <li>问题</li>
+              <li>输出</li>
+              <li>调试控制台</li>
+              <li>终端</li>
+              <li>自动换行</li>
+              <li>显示缩略图</li>
+            </ul>
+          </div>
+        </li>
+        <li>转到</li>
+        <li>运行</li>
+        <li>终端</li>
+        <li>帮助</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
