@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>定位布局2</title>
+
+  <style>
+    html,body {
+      margin: 0;
+      height: 100%;
+    }
+    section {
+      position: relative;
+      height: 100%;
+    }
+
+    .one {
+      position: absolute;
+      background-color:rgb(96, 117, 118);
+      width: 200px;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      border: 1px solid;
+    }
+    .aside {
+      font-size: 30px;
+    }
+
+    .ul {
+      overflow: auto;
+      position: absolute;
+      top: 100px;
+      width: 200px;
+      bottom: 0;
+    }
+
+    .four {
+      position: absolute;
+      background-color: rgb(212, 211, 211);
+      width: 200px;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      border: 1px solid;
+    }
+    .three {
+      position: absolute;
+      background-color:aliceblue;
+      width: 200px;
+      right: 200px;
+      top: 0;
+      bottom: 0;
+      border: 1px solid;
+    }
+
+    .title {
+      border: 1px solid;
+      position: absolute;
+      top: 0;
+      height: 100px;
+      left: 200px;
+      right: 400px;
+      background-color:azure;
+    }
+    .title p {
+      font-size: 30px;
+      padding-left: 20px;
+    }
+    main {
+      border: 1px solid;
+      position: absolute;
+      left: 200px;
+      right: 400px;
+      top: 100px;
+      bottom: 0;
+      background-color:azure;
+      overflow: auto;
+    }
+    main p {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      line-height: 2;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <div class="one">
+      <p class="aside">Aside</p>
+
+      <div class="ul">
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    </div>
+    <div class="title"><p>定位布局2</p></div>
+    <main>
+      <p>This Oscar-winner was loved by both audiences and critics after its 1999 release. Looking back though, a movie centered around a middle-aged man pining after his 16-year-old daughter's best friend isn't the best idea. Plus, it's hard to watch anything starring Kevin Spacey now. The problematic plot, Spacey's multiple allegations, and the pretentiousness of the "Sometimes there's so much beauty in the world, I feel like I can't take it" scene is enough to leave you with a pit in your stomach and a bad taste in your mouth.When a live-action version of Scooby-Doo was released in 2002, critics called it "tired" and full of "lame jokes." It was even nominated for two Razzie awards. But over the years, the film has gained quite a bit of a cult following, especially as the writer, James Gunn, gains more acclaim as a filmmaker, and it's now considered to be classic.At the time of its release, critics called National Treasure a "pedestrian ripoff of Raiders of the Lost Ark," and thought Nic Cage's performance was boring (uh, were we all watching the same movie?). But audiences, on the other hand, flocked to see it. Its bad reviews clearly don't hold up today, as it's become a truly beloved Disney movie and an absolutely classic adventure film!In 1995, Forrest Gump won the Academy Award for Best Picture. Since its release, it has been on countless "Best of" lists, and is even #76 on AFI's "100 Greatest American Films of All Time" list. But not long after the movie received its accolades, people began criticizing Forrest Gump for simplifying and whitewashing important moments in history, its portrayal of Black people and women, and overtly pandering to its audience.It's pretty funny to me that Roger Ebert claimed that Josie and the Pussycats "ignores bountiful opportunities to be a satire," when it is, in fact, jam-packed with satire. It pokes fun at the music industry, MTV, record companies, product placement, pop culture in general — I mean, the list goes on. So it really doesn't matter what the critics said when it came out, because it's a HUUUGE classic now and more relevant than ever.</p>
+    </main>
+    <div class="three"></div>
+    <div class="four"></div>
+  </section>
+</body>
+</html>
