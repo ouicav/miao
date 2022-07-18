@@ -4,118 +4,177 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>级联菜单</title>
+  <title>级联菜单new</title>
 
   <style>
-    /* 设置整体背景颜色 */
     body {
-      background-color: #34495E;
-      font-size: 0;
+      /* 设置整体背景颜色 */
+      background-color: #1E1E1E;
     }
-    /* 去掉列表样式 */
-    li {
+
+    /* 所有菜单 */
+    ul {
+      /* 清除列表样式 */
       list-style: none;
-    }
-    .all {
-      /* border: 2px solid; */
-    }
-    .menu ul li {
-      /* 设置最上方菜单栏样式 */
-      display: inline-block;
-      background-color:rgb(255, 255, 255);
-      border: 2px solid;
-      width: 70px;
-      height: 30px;
-      text-align: center;
-      font-family: 'Courier New', Courier, monospace;
-      font-size: 16px;
-      line-height: 2;
-    }
-    .click {
-      position: relative;
-    }
-
-    .click ul {
-      position: absolute;
-      left: -2px;
-      padding: 0;
+      /* 给所有列表项设定无边框 */
       margin: 0;
-      display: none;
-    }
-    .click ul li {
-      display:inline-block;
-      width: 150px;
-      text-align: left;
-    }
-    .second ul {
-      position: absolute;
-      display: none;
-    }
-    /* 光标hover到顶部菜单栏时变灰色 */
-    .menu ul li:hover {
-      background-color:rgb(132, 120, 120);
-    }
-    /* 点击查看出现第一层菜单 */
-    .menu li:hover .left {
-      display: block;
-    }
-    /* 光标hover的地方变色 */
-    .menu li ul li:hover {
-      background-color: #e67e22;
-    }
-    /* 点击编辑器布局出现第二层菜单
-      由于第二层菜单纵向显示，所以调整了左侧和顶部距离 */
-    .bianjiqi:hover .right ul {
-      display: block;
-      left: 100%;
-      top: 102px;
+      padding: 0;
+      color: #cccccc;
+      background-color: #303031;
     }
 
+    /* 给所有包含块设置边框 */
+    .menu {
+      padding: 0.5em;
+    }
+
+    .menu > li {
+      /* 只让第一层菜单横向排列 */
+      display: inline-block;
+    }
+
+    /* 选中顶部菜单栏各项 */
+    .menu li {
+      /* 第一层菜单的每一项为相对定位，即所有的菜单项都得成为它子菜单的定位祖先 */
+      position: relative;
+      /* 设定文字不折行 */
+      white-space: nowrap;
+      padding: 0 0.5em;
+    }
+
+    /* 选中第二级菜单 */
+    .menu ul {
+      /* 第二级菜单为绝对定位 */
+      position: absolute;
+      top: 100%;
+      left: 0;
+      display: none;
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
+      box-shadow: 0 0 5px #333;
+      border-radius: 0.3em;
+    }
+
+    /* 选中第三层菜单 */
+    .menu ul ul {
+      position: absolute;
+      left: 100%;
+      top: -0.5em;
+    }
+
+    .menu li li {
+      padding: 0.2em 150px 0.2em 10px;
+    }
+
+    .menu li li > span {
+      position: absolute;
+      right: 10px;
+    }
+
+    /* hover到顶部菜单栏时出现下一级菜单 */
+    .menu li:hover > ul {
+      display: block;
+    }
+
+    /* hover到每个li时背景色为蓝色 */
+    .menu li:hover {
+      background-color: #04395e;
+    }
+
+    /* li.sep {
+      border-top: 1px solid;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em
+    } */
+
+    .menu ul hr {
+      border: none;
+      border-top: 1px solid;
+    }
   </style>
 </head>
 <body>
-  <div class="all">
-    <div class="menu">
-      <ul>
-        <li>文件</li>
-        <li>编辑</li>
-        <li>选择</li>
-        <li>查看
-          <div class="click">
-            <ul class="left">
-              <li>命令面板</li>
-              <li>打开视图</li>
-              <li>外观</li>
-              <li class="bianjiqi">编辑器布局
-                <div class="right">
-                  <ul>
-                    <li>向上拆分</li>
-                    <li>向下拆分</li>
-                    <li>向左拆分</li>
-                    <li>向右拆分</li>
-                  </ul>
-                </div>
-              </li>
-              <li>资源管理器</li>
-              <li>搜索</li>
-              <li>源代码管理</li>
-              <li>运行</li>
-              <li>扩展</li>
-              <li>问题</li>
-              <li>输出</li>
-              <li>调试控制台</li>
-              <li>终端</li>
-              <li>自动换行</li>
-              <li>显示缩略图</li>
-            </ul>
-          </div>
+  <header>
+    <!-- logo -->
+    <div class="logo"></div>
+    <div>
+      <!-- 一级菜单 -->
+      <ul class="menu">
+        <li>文件(F)
+          <!-- 二级菜单 文件 -->
+          <ul>
+            <li>新建文本文件<span>Ctrl+N</span>
+            </li>
+            <li>新建文件…</li>
+            <li>新建窗口</li>
+            <hr>
+
+            <li>打开文件…<span>Ctrl+O</span></li>
+            <li>打开文件夹…</li>
+            <li>从文件打开工作区</li>
+            <li>打开最近的文件</li>
+            <hr>
+
+            <li>将文件夹添加到工作区</li>
+            <li>将工作区另存为</li>
+            <li>复制工作区</li>
+            <li>保存<span>Ctrl+S</span></li>
+            <li>另存为…<span>Ctrl+Shift+S</span></li>
+            <li>全部保存</li>
+            <hr>
+
+            <li>自动保存</li>
+            <li>首选项<span>></span>
+              <ul>
+                <li>设置<span>Ctrl+, </span></li>
+                <li>联级服务设置</li>
+                <li>扩展</li>
+                <hr>
+                <li>键盘快捷方式</li>
+                <hr>
+                <li>颜色主题</li>
+                <li>文件图标主题</li>
+              </ul>
+            </li>
+            <hr>
+
+            <li>还原文件</li>
+            <li>关闭编辑器</li>
+            <hr>
+
+            <li>退出</li>
+          </ul>
         </li>
-        <li>转到</li>
-        <li>运行</li>
-        <li>终端</li>
+        <li>编辑(E)</li>
+        <li>选择(S)</li>
+        <li>查看(V)
+          <!-- 二级菜单 查看 -->
+          <ul>
+            <li>命令面板…<span>Ctrl+Shift+P</span></li>
+            <li>打开视图</li>
+            <hr>
+            <li>外观</li>
+            <li>编辑器布局<span>></span>
+              <ul>
+                <li>向上拆分</li>
+                <li>向下拆分</li>
+                <li>向左拆分</li>
+                <li>向右拆分</li>
+              </ul>
+            </li>
+            <hr>
+            <li>资源管理器</li>
+            <li>搜索</li>
+            <li>源代码管理</li>
+            <li>运行</li>
+          </ul>
+        </li>
+        <li>转到(G)</li>
+        <li>运行(R)</li>
+        <li>终端(T)</li>
         <li>帮助</li>
       </ul>
     </div>
-  </div>
+  </header>
 </body>
 </html>
