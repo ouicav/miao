@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>twitter-heart</title>
+
+  <style>
+    button {
+      position: absolute;
+      top: 49px;
+      left: 80px;
+      background-color: transparent;
+      border: none;
+      font-size: 20px;
+      font-family:'Courier New', Courier, monospace;
+    }
+    .like {
+      background-image: url(./mao/1_MTZW1G1mE7LSX1CnhTYeHA.png);
+      height: 100px;
+      width: 100px;
+      /* 或background-position: 0 0; */
+      background-position: left;
+      /* background-repeat: no-repeat; */
+      position: absolute;
+    }
+
+    .like:hover {
+      width: 100px;
+      height: 100px;
+      /* 或background-position: -2800px 0; */
+      background-position: right;
+      /* steps是一个阶跃函数，函数曲线不是连续的，因为图片一共有29张，存在28个间隔，所以设置阶跃的步数为28 */
+      transition: 1s steps(28);
+    }
+  </style>
+</head>
+<body>
+    <div class="like"></div>
+    <button>Like</button>
+</body>
+</html>
