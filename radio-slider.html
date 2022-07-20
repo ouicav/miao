@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>radio-slider</title>
+
+  <style>
+    html,body {
+      position: relative;
+    }
+
+    section {
+      position: relative;
+      top: 30px;
+      left: 20px;
+      width: 800px;
+      height: 533px;
+      /* 把超出的三张图隐藏 */
+      overflow: hidden;
+    }
+
+    .imgs img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      /* 缓动效果 */
+      transition: all 1.2s cubic-bezier(0.49,-0.2, 0.5, 1.5);
+      left: 100%;
+      /* opacity: 0; */
+    }
+
+    .lb {
+      position: absolute;
+      right: 15px;
+      bottom: 10px;
+      z-index: 100;
+    }
+
+    .lb label {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      background-color:rgb(125, 125, 125);
+      /* 设置按钮为圆形 */
+      border-radius: 10px;
+      margin: 2px;
+      /* 光标为手型 */
+      cursor: pointer;
+    }
+
+    input {
+    /* 把input隐藏 */
+     display: none;
+    }
+
+    /* input的某一项被checked时，imgs里相应的图片向左滑动 */
+    input:nth-child(1):checked ~ .imgs img:nth-child(1),
+    input:nth-child(2):checked ~ .imgs img:nth-child(2),
+    input:nth-child(3):checked ~ .imgs img:nth-child(3),
+    input:nth-child(4):checked ~ .imgs img:nth-child(4) {
+      left: 0;
+      /* 透明度为1 */
+      /* opacity: 1; */
+    }
+
+    /* input被选中时，其兄弟元素label标签中相应的背景色变黄色 */
+    input:nth-child(1):checked ~ .lb label:nth-child(1),
+    input:nth-child(2):checked ~ .lb label:nth-child(2),
+    input:nth-child(3):checked ~ .lb label:nth-child(3),
+    input:nth-child(4):checked ~ .lb label:nth-child(4) {
+      background-color: goldenrod;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <input type="radio" id="btn1" name="radio1" checked>
+    <input type="radio" id="btn2" name="radio1">
+    <input type="radio" id="btn3" name="radio1">
+    <input type="radio" id="btn4" name="radio1">
+
+    <div class="imgs">
+      <img src="http://imgoss.cnu.cc/2107/28/f793aba4fba139c9a1f6f67fa1f649ee.jpg?x-oss-process=style/content" alt="">
+      <img src="http://imgoss.cnu.cc/2107/28/d1fbdef1db2e39fdac3cf56e62ee61e9.jpg?x-oss-process=style/content" alt="">
+      <img src="http://imgoss.cnu.cc/2107/28/2f99302460c13108a01fabc93045f49f.jpg?x-oss-process=style/content" alt="">
+      <img src="http://imgoss.cnu.cc/2107/28/1210434108913c959742a621014c7740.jpg?x-oss-process=style/content" alt="">
+    </div>
+
+    <div class="lb">
+      <label for="btn1"></label>
+      <label for="btn2"></label>
+      <label for="btn3"></label>
+      <label for="btn4"></label>
+    </div>
+  </section>
+</body>
+</html>
