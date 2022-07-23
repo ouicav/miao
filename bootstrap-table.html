@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style type="text/less">
+    html,body {
+      margin: 0 20px 20px 20px;
+    }
+    h3 {
+      margin-top: 50px;
+    }
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+      thead {
+        border-bottom: 2px solid #d9dde1;
+      }
+      tbody tr {
+        border-bottom: 1px solid #d9dde1;
+      }
+      td,th {
+        text-align: left;
+        padding: 0.6em;
+      }
+    }
+
+    .table-sm {
+      width: 100%;
+      border-collapse: collapse;
+      thead {
+        border-bottom: 2px solid #d9dde1;
+      }
+      tbody tr {
+        border-bottom: 1px solid #d9dde1;
+      }
+      td,th {
+        text-align: left;
+        padding: 0.3em;
+      }
+    }
+
+    .table-striped {
+      width: 100%;
+      border-collapse: collapse;
+      thead {
+        border-bottom: 2px solid #d9dde1;
+      }
+      tbody tr {
+        border-bottom: 1px solid #d9dde1;
+      }
+      td,th {
+        text-align: left;
+        padding: 0.6em;
+      }
+      /* 表体重的奇数行背景颜色偏深 */
+      tbody tr:nth-child(odd) {
+        background-color: #f2f2f2;
+      }
+    }
+
+    .table-hover {
+      width: 100%;
+      border-collapse: collapse;
+      thead {
+        border-bottom: 2px solid #d9dde1;
+      }
+      tbody tr {
+        border-bottom: 1px solid #d9dde1;
+      }
+      td,th {
+        text-align: left;
+        padding: 0.6em;
+      }
+      /* 表体中的每行被hover时，背景变深 */
+      tbody tr:hover {
+        background-color: #ececec;
+      }
+    }
+
+    /* 每个单元格都有边框 */
+    .table-bordered {
+      width: 100%;
+      border-collapse: collapse;
+      thead {
+        border-bottom: 2px solid #d9dde1;
+      }
+      td,th {
+        text-align: left;
+        padding: 0.6em;
+        border: 1px solid #d9dde1;
+      }
+    }
+
+    .table-borderless {
+      width: 100%;
+      border-collapse: collapse;
+      thead {
+        /* 去掉边框 */
+        border: none;
+      }
+      td,th {
+        text-align: left;
+        padding: 0.6em;
+        border: none;
+      }
+    }
+
+    .table-dark {
+      width: 100%;
+      border-collapse: collapse;
+      /* 主题为深色 */
+      background-color: #212529;
+      color: white;
+      thead {
+        border-bottom: 2px solid #d9dde1;
+      }
+      tbody tr {
+        border-bottom: 1px solid #d9dde1;
+      }
+      tbody tr:nth-child(odd) {
+        background-color: #2c3034;
+      }
+      td,th {
+        text-align: left;
+        padding: 0.6em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h3>table</h3>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>table-sm</h3>
+  <table class="table-sm">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>table-striped</h3>
+  <table class="table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>table-hover</h3>
+  <table class="table-hover">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>table-bordered</h3>
+  <table class="table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>table-borderless</h3>
+  <table class="table-borderless">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>table-dark</h3>
+  <table class="table-dark">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+<script src="less.js" ></script>
+</html>

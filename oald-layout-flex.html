@@ -7,136 +7,127 @@
   <title>oald-layout-flex</title>
 
   <style>
+    * {
+      font-size: 20px;
+      font-family: 'Courier New', Courier, monospace;
+    }
     html,body {
       margin: 0;
-      padding: 0;
+      height: 100%;
     }
     section {
+      height: 100%;
       display: flex;
-      width: 100%;
-      height: 100vh;
-      align-items: stretch;
-      justify-content: space-between;
     }
-
+    section > div {
+      border: 1px solid goldenrod;
+      box-sizing: border-box;
+    }
     .aside {
-      background-color: rgb(104, 104, 104);
       width: 200px;
-      height: auto;
-      overflow: hidden;
+      flex: none;
+      background-color: grey;
     }
-
-    .main {
-      background-color: burlywood;
-      flex-grow: 1;
-    }
-
-    .va {
-      background-color: black;
-      width: 200px;
-    }
-
-    .his {
-      background-color:cadetblue;
-      width: 200px;
-    }
-
     input {
-      margin: 8px;
+      width: 100px;
+      margin-left: 10px;
+    }
+    button {
+      margin-right: 10px;
+      font-size: 0.75em;
     }
     ul {
-      height: calc(100vh - 109.34px);
-      margin: 0;
+      overflow: auto;
+      height: calc(100% - 104.2px);
+    }
+    .main {
+      flex-grow: 1;
+      display: flex;
+      flex-flow: column;
+    }
+    .title {
+      height: 150px;
+      /* 给title定高 */
+      flex: none;
+      background-color:rgb(177, 201, 190);
+      line-height: 150px;
       overflow: auto;
     }
 
-    .main {
-      position: relative;
-      height: 100%;
-      overflow: hidden;
-    }
-    h1 {
-      position: absolute;
-      display: inline-block;
-      height: 100px;
-      margin: 0;
-      padding-left: 20px;
-      line-height: 100px;
-    }
     .article {
-      position: absolute;
-      top: 100px;
-      height: calc(100% - 130px);
       overflow: auto;
-      padding: 15px;
+      /* 在.main容器中分配剩余空间 */
+      flex-grow: 1;
+      /* height: 0; */
+      /* flex-basis: 0; */
+      /* flex: none; */
+      padding: 20px;
     }
   </style>
 </head>
 <body>
   <section>
     <div class="aside">
-      <h2>left aside</h2>
-      <input type="text" name="jiansuo" size="10px">
+      <h2>aside</h2>
+      <input type="text">
       <button>检索</button>
       <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
     </div>
     <div class="main">
-      <h1>Flex</h1>
-      <div class="article">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus ducimus quo dolorum possimus quisquam distinctio cum nulla. Architecto illum aliquam provident, maxime at harum placeat esse voluptatibus, cum quibusdam repellat?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde soluta, nihil, necessitatibus exercitationem tempora voluptas repellat, commodi voluptatibus corporis laborum quibusdam possimus fuga molestiae labore eius maxime error dolor repellendus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut delectus voluptates veniam molestiae architecto quis dolor iusto temporibus consequuntur perspiciatis? Dolorem enim necessitatibus eligendi praesentium vero quasi deleniti hic aspernatur?Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus ducimus quo dolorum possimus quisquam distinctio cum nulla. Architecto illum aliquam provident, maxime at harum placeat esse voluptatibus, cum quibusdam repellat?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde soluta, nihil, necessitatibus exercitationem tempora voluptas repellat, commodi voluptatibus corporis laborum quibusdam possimus fuga molestiae labore eius maxime error dolor repellendus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut delectus voluptates veniam molestiae architecto quis dolor iusto temporibus consequuntur perspiciatis? Dolorem enim necessitatibus eligendi praesentium vero quasi deleniti hic aspernatur?Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus ducimus quo dolorum possimus quisquam distinctio cum nulla. Architecto illum aliquam provident, maxime at harum placeat esse voluptatibus, cum quibusdam repellat?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde soluta, nihil, necessitatibus exercitationem tempora voluptas repellat, commodi voluptatibus corporis laborum quibusdam possimus fuga molestiae labore eius maxime error dolor repellendus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut delectus voluptates veniam molestiae architecto quis dolor iusto temporibus consequuntur perspiciatis? Dolorem enim necessitatibus eligendi praesentium vero quasi deleniti hic aspernatur?Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus ducimus quo dolorum possimus quisquam distinctio cum nulla. Architecto illum aliquam provident, maxime at harum placeat esse voluptatibus, cum quibusdam repellat?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde soluta, nihil, necessitatibus exercitationem tempora voluptas repellat, commodi voluptatibus corporis laborum quibusdam possimus fuga molestiae labore eius maxime error dolor repellendus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut delectus voluptates veniam molestiae architecto quis dolor iusto temporibus consequuntur perspiciatis? Dolorem enim necessitatibus eligendi praesentium vero quasi deleniti hic aspernatur?Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus ducimus quo dolorum possimus quisquam distinctio cum nulla. Architecto illum aliquam provident, maxime at harum placeat esse voluptatibus, cum quibusdam repellat?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde soluta, nihil, necessitatibus exercitationem tempora voluptas repellat, commodi voluptatibus corporis laborum quibusdam possimus fuga molestiae labore eius maxime error dolor repellendus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut delectus voluptates veniam molestiae architecto quis dolor iusto temporibus consequuntur perspiciatis? Dolorem enim necessitatibus eligendi praesentium vero quasi deleniti hic aspernatur?Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus ducimus quo dolorum possimus quisquam distinctio cum nulla. Architecto illum aliquam provident, maxime at harum placeat esse voluptatibus, cum quibusdam repellat?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde soluta, nihil, necessitatibus exercitationem tempora voluptas repellat, commodi voluptatibus corporis laborum quibusdam possimus fuga molestiae labore eius maxime error dolor repellendus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut delectus voluptates veniam molestiae architecto quis dolor iusto temporibus consequuntur perspiciatis? Dolorem enim necessitatibus eligendi praesentium vero quasi deleniti hic aspernatur?Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus ducimus quo dolorum possimus quisquam distinctio cum nulla. Architecto illum aliquam provident, maxime at harum placeat esse voluptatibus, cum quibusdam repellat?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde soluta, nihil, necessitatibus exercitationem tempora voluptas repellat, commodi voluptatibus corporis laborum quibusdam possimus fuga molestiae labore eius maxime error dolor repellendus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut delectus voluptates veniam molestiae architecto quis dolor iusto temporibus consequuntur perspiciatis? Dolorem enim necessitatibus eligendi praesentium vero quasi deleniti hic aspernatur?</div>
+      <div class="title">Title:Flex布局</div>
+      <div class="article">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores harum velit qui, aliquam ex blanditiis laudantium minus dolore enim, esse quis maxime ipsam optio laborum, facilis nemo voluptatem aspernatur dolores!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores harum velit qui, aliquam ex blanditiis laudantium minus dolore enim, esse quis maxime ipsam optio laborum, facilis nemo voluptatem aspernatur dolores!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores harum velit qui, aliquam ex blanditiis laudantium minus dolore enim, esse quis maxime ipsam optio laborum, facilis nemo voluptatem aspernatur dolores!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores harum velit qui, aliquam ex blanditiis laudantium minus dolore enim, esse quis maxime ipsam optio laborum, facilis nemo voluptatem aspernatur dolores!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores harum velit qui, aliquam ex blanditiis laudantium minus dolore enim, esse quis maxime ipsam optio laborum, facilis nemo voluptatem aspernatur dolores!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores harum velit qui, aliquam ex blanditiis laudantium minus dolore enim, esse quis maxime ipsam optio laborum, facilis nemo voluptatem aspernatur dolores!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores harum velit qui, aliquam ex blanditiis laudantium minus dolore enim, esse quis maxime ipsam optio laborum, facilis nemo voluptatem aspernatur dolores!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores harum velit qui, aliquam ex blanditiis laudantium minus dolore enim, esse quis maxime ipsam optio laborum, facilis nemo voluptatem aspernatur dolores!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores harum velit qui, aliquam ex blanditiis laudantium minus dolore enim, esse quis maxime ipsam optio laborum, facilis nemo voluptatem aspernatur dolores!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores harum velit qui, aliquam ex blanditiis laudantium minus dolore enim, esse quis maxime ipsam optio laborum, facilis nemo voluptatem aspernatur dolores!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores harum velit qui, aliquam ex blanditiis laudantium minus dolore enim, esse quis maxime ipsam optio laborum, facilis nemo voluptatem aspernatur dolores!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores harum velit qui, aliquam ex blanditiis laudantium minus dolore enim, esse quis maxime ipsam optio laborum, facilis nemo voluptatem aspernatur dolores!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores harum velit qui, aliquam ex blanditiis laudantium minus dolore enim, esse quis maxime ipsam optio laborum, facilis nemo voluptatem aspernatur dolores!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores harum velit qui, aliquam ex blanditiis laudantium minus dolore enim, esse quis maxime ipsam optio laborum, facilis nemo voluptatem aspernatur dolores!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores harum velit qui, aliquam ex blanditiis laudantium minus dolore enim, esse quis maxime ipsam optio laborum, facilis nemo voluptatem aspernatur dolores!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores harum velit qui, aliquam ex blanditiis laudantium minus dolore enim, esse quis maxime ipsam optio laborum, facilis nemo voluptatem aspernatur dolores!</div>
     </div>
-    <div class="va"></div>
-    <div class="his"></div>
+    <div class="aside">Aside</div>
+    <div class="aside">Aside</div>
   </section>
 </body>
 </html>

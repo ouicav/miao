@@ -4,117 +4,120 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>qq-mail-flex.html</title>
+  <title>qq-mail-flex</title>
 
   <style>
     html,body {
       margin: 0;
-      padding: 0;
+      height: 100%;
+    }
+    * {
+      font-size: 20px;
+      font-family:'Courier New', Courier, monospace;
     }
     section {
       display: flex;
-      height: 100vh;
-      width: 100%;
-      flex-wrap: wrap;
+      flex-direction: column;
+      height: 100%;
     }
 
     .title {
       height: 150px;
-      width: 100%;
-      border: 2px solid black;
-      box-sizing: border-box;
-      background-color:rgb(0, 0, 0);
-      color: white;
-      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-      font-size: 50px;
-    }
-    .aside {
-      width: 200px;
-      height: calc(100vh - 150px);
-      border: 2px solid;
-      border-top: 0;
-      box-sizing: border-box;
-      background-color:burlywood;
-      overflow: hidden;
+      background-color:rgb(126, 149, 168);
+      flex: none;
+      text-align: center;
+      line-height: 150px;
     }
 
-    ul {
+    .below {
+      display: flex;
+      flex: 1;
       overflow: auto;
-      height: calc(100vh - 150px);
-      margin: 0;
     }
-    .main {
-      flex-grow: 1;
-      border: 2px solid;
-      border-top: 0;
-      border-left: 0;
-      box-sizing: border-box;
-      background-color:rgb(164, 164, 164);
-      width: 0;
-      height: calc(100% - 150px);
+
+    .aside {
+      width: 150px;
+      background-color:rgb(70, 70, 70);
+      flex: none;
       overflow: auto;
-      font-size: 20px;
+      height: 100%;
+    }
+
+    .main {
+      flex: 1;
+      background-color:burlywood;
+      overflow: auto;
+      padding: 20px;
     }
   </style>
 </head>
 <body>
   <section>
-    <div class="title">Flex</div>
-    <div class="aside">
-      <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
+    <div class="title">Title：Flex布局</div>
+    <div class="below">
+      <div class="aside">
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+      <div class="main">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel quod temporibus impedit totam quisquam, repellendus fugiat fuga tenetur et non eius earum quaerat officiis aliquid! Soluta consectetur nam exercitationem saepe.
+      Blanditiis, quibusdam molestiae quo numquam nemo reprehenderit distinctio ipsum perferendis. Voluptas autem, in ratione laboriosam praesentium quasi esse delectus, ipsa eveniet possimus nostrum optio doloribus recusandae exercitationem consequuntur maxime ducimus.
+      Provident voluptas soluta est nihil iste iure itaque architecto quasi alias omnis officia quibusdam sunt consequuntur, odit voluptatum corporis atque aliquid ullam rerum quos. Est ipsa amet repellendus ut sapiente!
+      Quos deleniti voluptate explicabo aliquid vero provident dolor illo, adipisci consectetur magnam dolorum commodi quasi, laboriosam nulla voluptatem? Optio ea pariatur rerum quaerat omnis dolor consequatur porro? Non, tenetur repellat.
+      Perferendis, placeat asperiores quos corrupti itaque eos ex repellendus. Ipsa doloremque, quod facere est eum odit ad architecto iste magnam corrupti possimus, alias rerum aut fugit nihil neque quaerat atque!
+      Dicta nostrum quasi dolorem illo non. Rem, fuga in officiis molestiae libero ad saepe vero aliquid numquam corporis nisi accusantium voluptates perferendis delectus dolore consequuntur quidem dolores. Cupiditate, neque accusantium.
+      Repellendus totam eligendi magnam minima! Quod illo atque eius accusantium quaerat, iste exercitationem nostrum consequatur! Fugit illo porro consectetur, vero at, voluptates, debitis minima beatae quidem voluptatem itaque iure ipsam.
+      Doloribus ipsum minima ipsa atque pariatur odio nihil libero deleniti nesciunt labore quam iusto facere molestiae aperiam, culpa corrupti. Voluptate eius eveniet error facere omnis quo, saepe at fuga nam!
+      Natus laboriosam repellat qui, explicabo velit incidunt neque quam. Veritatis, saepe sapiente provident, suscipit quam quas nostrum adipisci quod nisi animi reiciendis quia ex accusantium labore beatae nihil est deserunt.
+      Qui eligendi veniam deserunt assumenda ipsum, id aperiam quidem iste vitae, eveniet repellat? In, accusamus nemo vero quaerat saepe perferendis ut mollitia facilis, sunt, rerum iure ducimus cum nulla repellat.
+      Laborum eveniet repellat asperiores hic aspernatur quas, nemo voluptatum itaque voluptatem minima placeat perferendis eaque officia quaerat, in culpa explicabo totam mollitia dolore libero. Natus magni omnis ex eveniet id.
+      Tempora perferendis eveniet voluptatum mollitia! Dolor, cumque exercitationem minima numquam reiciendis alias eius similique cum voluptatibus voluptatum? Quam minima perspiciatis eaque unde beatae nobis. Sint ut voluptatibus ullam corporis veniam.
+      Facilis iure iste, eius nisi dolore inventore eligendi reprehenderit ut omnis sequi. Expedita et non molestiae amet perferendis veritatis voluptatibus, dolorum, itaque commodi quasi aliquam pariatur officiis deleniti explicabo vitae!
+      Sint amet corporis perferendis voluptate facilis, fuga incidunt velit, reprehenderit cupiditate autem repellendus tenetur adipisci facere nemo, nisi necessitatibus repellat? Accusamus obcaecati voluptatum enim nihil corporis animi labore laudantium deleniti!
+      Ipsum omnis sit ex expedita facere. Inventore culpa nulla fuga aliquid porro laudantium laboriosam veritatis error delectus optio voluptas alias vero vitae aliquam, minus a aperiam omnis perferendis cum saepe?
+      Officia voluptas laborum totam dolore deleniti ex, fuga eum deserunt veniam laboriosam iure architecto dignissimos, cumque reprehenderit, quod dicta maiores praesentium vitae exercitationem! Libero placeat, est reiciendis quibusdam nam corrupti.
+      Maxime, eos. Reiciendis, temporibus repudiandae obcaecati nulla magni minus cumque neque tenetur, id incidunt dignissimos doloribus harum, odio officiis libero aliquid ut. Optio sequi quaerat molestias illo aperiam magni maiores.
+      Facilis earum optio consequuntur fugiat assumenda voluptatum fugit labore eius officia consectetur quod et, excepturi similique quidem blanditiis libero velit voluptatibus sint? Ipsum vel reiciendis assumenda iure aliquid veniam consequuntur.
+      Quasi, dicta cupiditate. Aliquam autem, quasi officiis excepturi quo repellendus eum esse labore dolores ab vero nisi reprehenderit eius voluptatibus nihil. Ipsa nulla deserunt sapiente a ab, nam nihil eum!
+      Magnam cumque quas, nesciunt nemo, similique adipisci itaque omnis odio odit beatae nobis fugiat necessitatibus iure corrupti tempore voluptate at distinctio? At rem, illum corrupti non libero rerum quas fuga!
+      Minus vel doloremque delectus, dolores quas, nam quisquam non accusantium reiciendis adipisci similique numquam voluptatibus repellat eveniet distinctio commodi! Maxime necessitatibus porro corporis fugiat accusantium aperiam, perspiciatis laboriosam recusandae veniam!
+      Eius ipsam eum accusamus laudantium distinctio, cumque reprehenderit voluptas consequatur quaerat, voluptatem corrupti omnis possimus similique! Voluptatum, odio, similique unde repellendus, corporis animi fugit fuga provident natus sed at ratione!
+      Ab, eveniet quod perferendis ad corrupti voluptate nobis quis laudantium dolores minus. Obcaecati, blanditiis? Fugit aut dolores magni expedita, sunt mollitia incidunt ex corporis provident vero, sit soluta voluptate at.
+      Quos, iusto veritatis. Error inventore sit maiores cum similique id corporis reiciendis! Provident, vero sapiente, totam eos ratione magni expedita aliquam dolorum veritatis, debitis voluptatum inventore vel quam sint odit!
+      At perspiciatis nulla a? Deserunt, eveniet earum ipsum mollitia quod doloremque aut voluptatum nam tempora hic. Soluta commodi illo recusandae. Fugit iusto error blanditiis consectetur beatae similique necessitatibus corrupti facere.
+      Inventore molestiae cupiditate aspernatur nisi? Deleniti distinctio id omnis autem nesciunt eveniet commodi ad soluta? Doloribus incidunt debitis similique, porro nemo provident aliquam animi accusantium ullam voluptate, eum magnam unde!
+      Ipsum eius doloribus neque beatae iure, sed, et necessitatibus explicabo, facere animi deleniti earum voluptatibus accusantium autem? Vero, odit exercitationem dignissimos quia cum cupiditate dolor, aliquam veritatis explicabo laborum sequi?
+      Laboriosam quas itaque possimus natus totam eaque, praesentium corrupti eos dolore harum neque voluptate soluta ad esse odit autem quam placeat velit unde saepe laudantium suscipit non! Nulla, doloribus sint.
+      Facilis tempora suscipit temporibus, similique amet quibusdam, minus nulla totam ullam maiores ducimus. Ut voluptates labore illo est ratione. Explicabo repellendus qui iste fuga? Modi laborum suscipit mollitia quam soluta!
+      Sunt quibusdam, tempora recusandae consequuntur quo debitis ullam aut sequi maxime quaerat deserunt dolore obcaecati optio repudiandae fuga itaque minima ipsum quam error possimus ut qui. Blanditiis eum veritatis earum.</div>
     </div>
-    <div class="main">《第33屆金曲獎頒獎典禮》於7月2日圓滿落幕，頒獎典禮於電視頻道播出之整體平均收視3.48，有效平均收視3.55，總收視人口達316萬4千人，其中45歲到54歲男性收視高達5.24，表現最佳！典禮平均最高收視4.88，落在陳美鳳、蔡昌憲頒發「最佳台語專輯獎」，共106萬人收看。此外，截至7月4日上午10點為止，《第33屆金曲獎頒獎典禮》YouTube官方網路平台總點擊數為441萬7,879次、另LINE TODAY、LINE MUSIC、LINE TV等LINE三大內容平台獨家直播，觀看次數突破300萬；新媒體平台總點擊率近750萬人次，也創下新媒體觀看歷年新高。 台視轉播典禮的平均最高收視4.88，落在陳美鳳、蔡昌憲頒發「最佳台語專輯獎」，共106萬人收看；次高收視4.77落在「最佳台語女歌手獎」江惠儀上台領獎致詞，共103萬6千人收看；第三高收視4.22則是由「最佳編曲人獎」黃少雍上台領獎致詞、以及連莊拿下「最佳作曲人」的HUSH上台領獎致詞並列，共91萬7千人收看。此外，奪下「最佳演唱組合獎」的新寶島康樂隊上台領獎致詞，收視也達4.22，共有91萬6千人收看。 表演節目以雙「金曲歌后」徐佳瑩、艾怡良演唱組曲「Forever Young+身騎白馬+我這個人+你敢不敢」最吸睛，收視達4.26，吸引92萬6千人觀看；次高收視4.06落在珂拉琪奪下本屆「最佳新人獎」後演唱「葬予規路火猶在」時，吸引88萬1千人觀看，第三高收視4.00，落在Matzka瑪斯卡、大淵MUTA合唱組曲「e e a puluvat 不想分享妳的愛+kamaya a su tjengelayan tjanuaqen 到底妳還是愛我的+FatBoyGang」，共87萬人觀看； 第四高收視則是「娃娃」魏如萱、米莎雙人組曲「末路狂花+山鬼+大賞+野兔與槍+管他什麼音樂」，收視3.92，共吸引85萬2千人觀看；而林宥嘉的組曲「給小孩+怪獸+稍息立正站好+ㄘㄨㄚˋ冰進行曲+豆豆龍」收視也有3.37，共73萬2千人收看。 台視轉播星光大道部分，全體平均收視1.59，有效收視1.41，最高點落在身材保養得宜的「陳美鳳」星光紅毯受訪時，收視達3.06，共吸引66萬4千人收看；次高為韋禮安紅毯受訪，收視2.87，共62萬3千人收看，第三高為今年奪下4大獎項的「蔡健雅」星光紅毯受訪，收視2.82，共61萬2千人收看。 近年來，由於觀眾收視習慣的改變，新媒體觀看次數的表現更是亮眼！表演節目的前三高點擊數分別為：「艾怡良X徐佳瑩」雙金曲歌后表演節目（點擊率524,281）、「典禮主持人羅時豐X karencici」開場表演『今晚，我要去高雄』開場表演節目（點擊率404,582）、林宥嘉表演節目（點擊率342,390）。另，頒獎典禮頒發獎項的前三高點擊數分別為：「陶晶瑩X小ＳX具俊曄」頒發年度歌曲獎（點擊率 276,148）、「HUSH」頒發最佳作詞人獎 （點擊率82,423）、「壞特?te」頒發最佳新人獎 （點擊率75,047）。 《第33屆流行音樂金曲獎頒獎典禮》今年由「國民姑丈」羅時豐獨挑大樑接下主持棒，透露從一開始接到邀約時的心情忐忑、到近兩個月的開會、錄音拍攝與場館的彩排，都全力以赴投入此盛典，如今典禮圓滿落幕，羅時豐表示此刻心情：「如釋重負、繼續努力」，同時也說：「初次參與金曲典禮的主持工作，總有學習和進步的空間」。而星光大道則由YELLOW黃宣搭上陳明珠主持，兩人首度搭檔的絕佳默契，也獲得觀眾的一致盛讚，星光大道收視亮眼。YELLOW黃宣笑說：「好像剛跟阿珠辦完一場婚禮接待，謝謝所有參與嘉賓的祝福與分享。」也感謝當天場邊熱情的觀眾，內心的火早早就被點燃，整場都非常非常興奮。陳明珠也表示：「前一天彩排完後，黃宣還到房間一起開會檢討，想好所有臨時狀況的暗號並互相支援；而當天真的是興奮大於緊張，不僅是年度盛會，更是隔了好幾年後大家能夠一起歡慶的音樂人年度盛會。一主持完，要走回休息室的路上眼淚就快噴出來，當天晚上抱著黃宣激動落淚，不敢置信自己能順利完成這個奇幻旅程。」她也很感謝有幕後團隊的幫忙，才可以無後顧之憂地在台上主持。</div>
   </section>
 </body>
 </html>
