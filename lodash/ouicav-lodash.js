@@ -144,6 +144,71 @@ var ouicav = function() {
   }
 
 
+  function join(ary, separator = ',') {
+    let newStr = ''
+    for (let i = 0; i < ary.length; i++) {
+      // 最后一个元素不需要加分隔符
+      if (i === ary.length - 1) {
+        newStr += ary[i]
+      } else {
+        // 其余每个元素后需添加分隔符
+        newStr = newStr + ary[i] + separator
+      }
+    }
+    return newStr
+  }
+
+
+  function last(ary) {
+    if (ary.length === 0) {
+      return undefined
+    } else {
+      return ary[ary.length - 1]
+    }
+  }
+
+
+  // function pull(ary, ...values) {
+  //   let newArray = []
+  //   for (let i = 0; i < ary.length; i++) {
+  //     if (!(values.includes(ary[i]))) {
+  //       newArray.push(ary[i])
+  //     }
+  //   }
+  //   return newArray
+  // }
+
+  function pull(ary, ...values) {
+    // 修改原数组的情况
+    for (let i = 0; i < ary.length; i++) {
+      // 把ary的每一项去判断是否存在value里
+      if (values.includes(ary[i])) {
+        // 从下标为i的位置开始，删除一个元素
+        ary.splice(i, 1)
+        // 由于元素被删除了一个，循环次数减1
+        i--
+      }
+    }
+    return ary
+  }
+
+
+  function reverse(ary) {
+    let left = 0  // 左指针
+    let right = ary.length - 1  // 右指针
+    while (left < right) {
+      let temp = ary[left]
+      ary[left] = ary[right]
+      ary[right] = temp
+
+      left++
+      right--
+    }
+    return ary
+  }
+
+
+
 
   return {
     compact,
@@ -158,6 +223,10 @@ var ouicav = function() {
     indexOf,
     lastIndexOf,
     initial,
+    join,
+    last,
+    pull,
+    reverse,
   }
 
 }()
